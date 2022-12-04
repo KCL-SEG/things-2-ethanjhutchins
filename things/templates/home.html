@@ -7,5 +7,9 @@
     Things
   </h1>
   <p>Some stuff about things goes here.</p>
+  <form action = '{% url "home" %}' method = "post">   <!-- Returns to the form once submitted. -->
+    {% csrf_token %}    <!-- Authenticates the source of a request. -->
+    {{ form.as_p }}    <!-- Used to present variables in the template -->
+    <input type='submit' value="Home">
 </body>
 </html>
